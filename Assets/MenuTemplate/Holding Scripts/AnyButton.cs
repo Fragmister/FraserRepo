@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
+using UnityEngine.SceneManagement;
+//using UnityEngine.SceneManagement;
 public class NewMonoBehaviourScript : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -23,6 +25,10 @@ public class NewMonoBehaviourScript : MonoBehaviour
                 buttonPress = false;
             }
         });
+    }
+    public void GoToMainMenu(InputAction.CallbackContext context)
+    {
+        SceneManager.LoadScene("MenuScene");
     }
 }
 
