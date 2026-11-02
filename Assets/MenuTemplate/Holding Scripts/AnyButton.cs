@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 //using UnityEngine.SceneManagement;
 public class NewMonoBehaviourScript : MonoBehaviour
 {
+
+   
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,10 +28,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
             }
         });
     }
-    public void GoToMainMenu(InputAction.CallbackContext context)
-    {
-        SceneManager.LoadScene("MenuScene");
-    }
+    
 }
 
 

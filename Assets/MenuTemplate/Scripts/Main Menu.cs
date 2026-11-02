@@ -11,13 +11,7 @@ public class MainMenu : MonoBehaviour
         
     }
 
-    public void SettingsPressed()
-    {
-        if (manager != null)
-        {
-            
-        }
-    }
+   
 
     // Update is called once per frame
     void Update()
