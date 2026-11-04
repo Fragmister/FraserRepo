@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class SettingsTabs : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void ShowPanel(GameObject panel)
     {
-        
+        panel.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void HidePanel(GameObject panel)
     {
-        
+        panel.SetActive(false);
+    }
+
+    public void TogglePanel(GameObject panel)
+    {
+        panel.SetActive(!panel.activeSelf);
     }
 }
