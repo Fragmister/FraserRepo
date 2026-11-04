@@ -24,6 +24,7 @@ public class CreatingAndDestroying : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        spawnedUI.SetActive(true);
     }
 }

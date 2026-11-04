@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:editor="UnityEditor.UIElements" xmlns:engine="UnityEngine.UIElements" xmlns="UnityEditor.Accessibility" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="UnityEngine.UIElements.xsd" namespace="UnityEngine.UIElements" />
+  <xs:simpleType name="CustomInputDisplayBinding_update-trigger_Type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="WhenDirty" />
+      <xs:enumeration value="OnSourceChanged" />
+      <xs:enumeration value="EveryUpdate" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CustomInputDisplayBinding_device_Type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Keyboard" />
+      <xs:enumeration value="Gamepad" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="CustomInputDisplayBindingType">
+    <xs:complexContent mixed="false">
+      <xs:restriction base="engine:VisualElementType">
+        <xs:attribute default="" name="property" type="xs:string" use="optional" />
+        <xs:attribute default="OnSourceChanged" name="update-trigger" type="CustomInputDisplayBinding_update-trigger_Type" use="optional" />
+        <xs:attribute default="Keyboard" name="device" type="CustomInputDisplayBinding_device_Type" use="optional" />
+        <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
+        <xs:attribute default="" name="class" type="xs:string" use="optional" />
+        <xs:attribute default="" name="style" type="xs:string" use="optional" />
+        <xs:anyAttribute processContents="lax" />
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CustomInputDisplayBinding" substitutionGroup="engine:VisualElement" type="CustomInputDisplayBindingType" />
+</xs:schema>

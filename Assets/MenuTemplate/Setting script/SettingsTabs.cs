@@ -1,14 +1,7 @@
 using UnityEngine;
-using UnityEngine.UI;
 
-
-public class TabsManager : MonoBehaviour
+public class SettingsTabs : MonoBehaviour
 {
-    public tabGroup;
-
-
-
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
